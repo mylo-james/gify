@@ -8,7 +8,6 @@ const SearchBar = (props) => {
   // TODO: Create an`onChange` handler for your input value.
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(props.fetchGifs);
     props.fetchGifs(inputValue);
   };
 

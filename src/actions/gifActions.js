@@ -16,10 +16,8 @@ const receiveGifs = (gifs) => {
 
 // TODO: Write a thunk action creator
 export const fetchGifs = (searchTerm) => async (dispatch) => {
-  console.log(searchTerm);
   const res = await APIUtil.fetchGifs(searchTerm);
   const res_1 = await res.json();
-  console.log(res_1.data);
   dispatch(receiveGifs(res_1.data));
 };
 
